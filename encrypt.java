@@ -8,6 +8,10 @@ class encrypt{
                 char base = Character.isUpperCase(ch) ? 'A' : 'a';
                 ch = (char) ((ch - base + num) % 26 + base);
             }
+
+            else if(Character.isWhitespace(ch)){
+                ch = '~';
+            }
             cipher.append(ch);
         }
 
